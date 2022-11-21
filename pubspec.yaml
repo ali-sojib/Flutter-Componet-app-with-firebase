@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   google_fonts:
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +24,8 @@ flutter:
 
   assets:
     - assets/images/my_adobie.jpg
+    - assets/images/quotes_icon.png
+    - assets/images/splash_top_icon.png
   #   - images/a_dot_ham.jpeg
   # fonts:
   #   - family: Schyler

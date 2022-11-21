@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_with_firebase/src/utils/theme/widget_theme/text_theme.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SAppTheme {
   ///making SAppTheme constructor private
