@@ -13,6 +13,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts:
   get: ^4.6.5
+  liquid_swipe: ^3.0.0
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:
@@ -23,9 +25,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/my_adobie.jpg
-    - assets/images/quotes_icon.png
-    - assets/images/splash_top_icon.png
+    - assets/images/
+    - assets/images/on_boarding_img/
+
   #   - images/a_dot_ham.jpeg
   # fonts:
   #   - family: Schyler

@@ -1,4 +1,4 @@
-import 'package:flutter_app_with_firebase/src/features/authentication/screens/welcome/welcome_scree.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:get/get.dart';
 
 class SplashScreenController extends GetxController {

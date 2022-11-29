@@ -4,7 +4,7 @@ import 'package:flutter_app_with_firebase/src/constant/image_strings.dart';
 import 'package:flutter_app_with_firebase/src/constant/sizes.dart';
 import 'package:flutter_app_with_firebase/src/constant/text_strings.dart';
 import 'package:get/get.dart';
-import 'package:flutter_app_with_firebase/src/features/authentication/screens/welcome/welcome_scree.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/welcome/welcome_screen.dart';
 
 import '../../controllers/splash_screen_controller.dart';
 
@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: 1000),
                 opacity: splashController.animate.value ? 1 : 0,
-                child: Image(height: 180, width: 250, image: AssetImage(sSplashTopIcon)),
+                child: Image.asset(height: 180, width: 250, sSplashTopIcon),
               ),
             ),
             AnimatedPositioned(
@@ -52,7 +52,7 @@ class SplashScreen extends StatelessWidget {
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: 1000),
                 opacity: splashController.animate.value ? 1 : 0,
-                child: Image(height: 350, width: 350, image: AssetImage(sSplashImage)),
+                child: Image.asset(height: 350, width: 350, sSplashImage),
               ),
             ),
             Positioned(
