@@ -3,78 +3,35 @@ import 'package:flutter_app_with_firebase/src/constant/colors.dart';
 import 'package:flutter_app_with_firebase/src/constant/image_strings.dart';
 import 'package:flutter_app_with_firebase/src/constant/sizes.dart';
 import 'package:flutter_app_with_firebase/src/constant/text_strings.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/controllers/on_boarding_controller.dart';
 import 'package:flutter_app_with_firebase/src/features/authentication/models/model_on_boarding.dart';
 import 'package:flutter_app_with_firebase/src/features/authentication/screens/on_boarding/on_boarding_page.dart';
+import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class OnBoardingScreen extends StatefulWidget {
+class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({Key? key}) : super(key: key);
 
-  @override
-  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
-}
-
-class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  final controller = LiquidController();
-
-  int currentPage = 0;
+  OnBoardingController onBoardingController = Get.put(OnBoardingController());
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
-    final pages = [
-      OnBoardingPage(
-        model: OnBoardingModel(
-          image: sOnBoardingImg1,
-          title: sOnBoardingTitle1,
-          subTitle: sOnBoardingSubTitle1,
-          counterText: sOnBoardingCount1,
-          bgColor: sOnBoardingPage1Color,
-          sizeHeight: size.height,
-        ),
-      ),
-      OnBoardingPage(
-        model: OnBoardingModel(
-          image: sOnBoardingImg2,
-          title: sOnBoardingTitle2,
-          subTitle: sOnBoardingSubTitle2,
-          counterText: sOnBoardingCount2,
-          bgColor: sOnBoardingPage2Color,
-          sizeHeight: size.height,
-        ),
-      ),
-      OnBoardingPage(
-        model: OnBoardingModel(
-          image: sOnBoardingImg3,
-          title: sOnBoardingTitle3,
-          subTitle: sOnBoardingSubTitle3,
-          counterText: sOnBoardingCount3,
-          bgColor: sOnBoardingPage3Color,
-          sizeHeight: size.height,
-        ),
-      ),
-    ];
-
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
         children: [
           LiquidSwipe(
-            pages: pages,
-            liquidController: controller,
-            slideIconWidget: const Icon(Icons.arrow_back_ios),
-            enableSideReveal: true,
-            onPageChangeCallback: onPageChangedCallback,
+            pages: onBoardingController.pages,
+            liquidController: onBoardingController.controller,
+            // slideIconWidget: const Icon(Icons.arrow_back_ios),
+            // enableSideReveal: true,
+            onPageChangeCallback: onBoardingController.onPageChangedCallback,
           ),
           Positioned(
             bottom: 60,
             child: OutlinedButton(
-              onPressed: () {
-                int nextPage = controller.currentPage + 1;
-                controller.animateToPage(page: nextPage);
-              },
+              onPressed: () => onBoardingController.animateToNextSlide(),
               style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: Colors.black26),
                 shape: const CircleBorder(),
@@ -92,29 +49,25 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             top: 50,
             right: 20,
             child: TextButton(
-              onPressed: () => controller.jumpToPage(page: 2),
+              onPressed: () => onBoardingController.skip(),
               child: const Text('Skip', style: TextStyle(color: Colors.grey)),
             ),
           ),
-          Positioned(
-            bottom: 20,
-            child: AnimatedSmoothIndicator(
-              activeIndex: controller.currentPage,
-              count: 3,
-              effect: const WormEffect(
-                activeDotColor: Color(0xff272727),
-                dotHeight: 5.0,
+          Obx(() {
+            return Positioned(
+              bottom: 20,
+              child: AnimatedSmoothIndicator(
+                activeIndex: onBoardingController.currentPage.value,
+                count: 3,
+                effect: const WormEffect(
+                  activeDotColor: Color(0xff272727),
+                  dotHeight: 5.0,
+                ),
               ),
-            ),
-          ),
+            );
+          }),
         ],
       ),
     );
-  }
-
-  onPageChangedCallback(int activePageIndex) {
-    setState(() {
-      currentPage = activePageIndex;
-    });
   }
 }

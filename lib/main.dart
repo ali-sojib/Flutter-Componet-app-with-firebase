@@ -15,9 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'Flutter Demo', theme: SAppTheme.lightTheme, darkTheme: SAppTheme.darkTheme, themeMode: ThemeMode.system, home: OnBoardingScreen()
-        // SplashScreen(),
-        );
+      title: 'Flutter Demo',
+      theme: SAppTheme.lightTheme,
+      darkTheme: SAppTheme.darkTheme,
+      themeMode: ThemeMode.system,
+      home: OnBoardingScreen(),
+      // SplashScreen(),
+    );
   }
 }
 
