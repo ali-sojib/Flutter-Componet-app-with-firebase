@@ -8,8 +8,17 @@ import 'package:flutter_app_with_firebase/src/features/authentication/screens/on
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({Key? key}) : super(key: key);
+class OnBoardingScreen extends StatefulWidget {
+  OnBoardingScreen({Key? key}) : super(key: key);
+
+  @override
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
+}
+
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  final controller = LiquidController();
+
+  int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +57,6 @@ class OnBoardingScreen extends StatelessWidget {
       ),
     ];
 
-    final controller = LiquidController();
-
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
@@ -59,11 +66,15 @@ class OnBoardingScreen extends StatelessWidget {
             liquidController: controller,
             slideIconWidget: const Icon(Icons.arrow_back_ios),
             enableSideReveal: true,
+            onPageChangeCallback: onPageChangedCallback,
           ),
           Positioned(
             bottom: 60,
             child: OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                int nextPage = controller.currentPage + 1;
+                controller.animateToPage(page: nextPage);
+              },
               style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: Colors.black26),
                 shape: const CircleBorder(),
@@ -81,7 +92,7 @@ class OnBoardingScreen extends StatelessWidget {
             top: 50,
             right: 20,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () => controller.jumpToPage(page: 2),
               child: const Text('Skip', style: TextStyle(color: Colors.grey)),
             ),
           ),
@@ -99,5 +110,11 @@ class OnBoardingScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  onPageChangedCallback(int activePageIndex) {
+    setState(() {
+      currentPage = activePageIndex;
+    });
   }
 }
