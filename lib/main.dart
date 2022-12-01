@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
 import 'package:flutter_app_with_firebase/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:flutter_app_with_firebase/src/utils/theme/theme.dart';
 import 'package:get/get.dart';
@@ -14,12 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: SAppTheme.lightTheme,
-      darkTheme: SAppTheme.darkTheme,
-      themeMode: ThemeMode.system,
-      home: SplashScreen(),
-    );
+        title: 'Flutter Demo', theme: SAppTheme.lightTheme, darkTheme: SAppTheme.darkTheme, themeMode: ThemeMode.system, home: OnBoardingScreen()
+        // SplashScreen(),
+        );
   }
 }
 
