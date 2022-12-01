@@ -29,7 +29,7 @@ class OnBoardingPage extends StatelessWidget {
           ),
           Column(
             children: [
-              Text(model.title, style: Theme.of(context).textTheme.headline4, textAlign: TextAlign.center),
+              Text(model.title, style: Theme.of(context).textTheme.headline3, textAlign: TextAlign.center),
               Text(model.subTitle, textAlign: TextAlign.center),
             ],
           ),

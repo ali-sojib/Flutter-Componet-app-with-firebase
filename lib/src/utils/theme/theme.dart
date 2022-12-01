@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_with_firebase/src/utils/theme/widget_theme/elevatedButton_theme.dart';
 import 'package:flutter_app_with_firebase/src/utils/theme/widget_theme/text_theme.dart';
+import 'package:flutter_app_with_firebase/src/utils/theme/widget_theme/outlinedButton_theme.dart';
 
 class SAppTheme {
   ///making SAppTheme constructor private
@@ -28,9 +30,13 @@ class SAppTheme {
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     textTheme: STextTheme.lightTextTheme,
+    outlinedButtonTheme: SOutlinedButtonTheme.lightOutlinedButtonTheme,
+    elevatedButtonTheme: SElevatedButtonTheme.lightElevatedButtonTheme,
   );
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    textTheme: STextTheme.dartTextTheme,
+    textTheme: STextTheme.darkTextTheme,
+    outlinedButtonTheme: SOutlinedButtonTheme.darkOutlinedButtonTheme,
+    elevatedButtonTheme: SElevatedButtonTheme.darkElevatedButtonTheme,
   );
 }

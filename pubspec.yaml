@@ -27,6 +27,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/on_boarding_img/
+    - assets/images/welcome_images/
 
   #   - images/a_dot_ham.jpeg
   # fonts:

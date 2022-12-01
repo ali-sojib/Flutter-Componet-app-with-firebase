@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
       theme: SAppTheme.lightTheme,
       darkTheme: SAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: OnBoardingScreen(),
-      // SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }

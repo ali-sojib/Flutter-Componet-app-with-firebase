@@ -1,3 +1,4 @@
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:get/get.dart';
 import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
 
@@ -45,10 +46,13 @@ class OnBoardingController extends GetxController {
     currentPage.value = activePageIndex;
   }
 
-  skip() => controller.jumpToPage(page: 2);
+  skip() => Get.offAll(WelcomeScreen());
 
   animateToNextSlide() {
     int nextPage = controller.currentPage + 1;
     controller.animateToPage(page: nextPage);
+    if (nextPage == 3) {
+      Get.offAll(WelcomeScreen());
+    }
   }
 }

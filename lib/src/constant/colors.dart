@@ -10,6 +10,6 @@ const sCardColor = Color(0xFFF7F6F1);
 const sWhiteColor = Color(0xffffffff);
 const sDarkColor = Color(0xFF000000);
 
-const sOnBoardingPage1Color = Color(0xFF8080FF);
-const sOnBoardingPage2Color = Color(0xFFFF3BFF);
-const sOnBoardingPage3Color = Color(0xFFFFAF47);
+const sOnBoardingPage1Color = Color(0xFFFFA4A4);
+const sOnBoardingPage2Color = Color(0xffd4717a);
+const sOnBoardingPage3Color = Color(0xffed5d6b);

@@ -5,3 +5,5 @@ const String sSplashImage = "assets/images/quotes_icon.png";
 const String sOnBoardingImg1 = "assets/images/on_boarding_img/onboarding_1.jpg";
 const String sOnBoardingImg2 = "assets/images/on_boarding_img/onboarding_2.jpg";
 const String sOnBoardingImg3 = "assets/images/on_boarding_img/onboarding_3.jpg";
+
+const String sWelcomeScreenImage = "assets/images/welcome_images/welcome_screen_image.png";
