@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '../../../../constant/image_strings.dart';
-import '../../../../constant/sizes.dart';
-import '../../../../constant/text_strings.dart';
+import '../../constant/image_strings.dart';
+import '../../constant/sizes.dart';
+import '../../constant/text_strings.dart';
 
-class LoginFooterWidget extends StatelessWidget {
-  const LoginFooterWidget({
+class FormFooterWidget extends StatelessWidget {
+  FormFooterWidget({
     Key? key,
+    required this.ftText,
+    required this.sdText,
   }) : super(key: key);
+
+  String ftText, sdText;
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +33,11 @@ class LoginFooterWidget extends StatelessWidget {
           onPressed: () {},
           child: Text.rich(
             TextSpan(
-              text: sDontHaveAnAccount,
+              text: ftText,
               style: Theme.of(context).textTheme.bodyText1,
-              children: const [
+              children: [
                 TextSpan(
-                  text: sSignUp,
+                  text: sdText,
                   style: TextStyle(color: Colors.blue),
                 ),
               ],

@@ -27,10 +27,16 @@ const String sWelcomeScreenSubTitle = "Explorer the best Quotes for you";
 const String sLoginTitle = "Welcome Back, ";
 const String sLoginSubTitle = "Make it work, make it right, make it fast.";
 const String sRememberMe = "Remember Me?";
-const String sAlreadyHaveAnAccount = "Already have an Account?";
+const String sAlreadyHaveAnAccount = "Already have an Account? ";
 const String sDontHaveAnAccount = "Don't Have An Account? ";
 
 const String sEmail = "E-mail";
 const String sPassword = "Password";
 const String sForgetPassword = "Forget Password? ";
 const String sSignInWithGoogle = "Sign-In With Google";
+
+//--Signup Screen Text
+const String sSignupTitle = "Get On Board!";
+const String sSignupSubTitle = "Create your profile to start your Journey with us.....";
+const String sPhoneNo = "Phone Number";
+const String sFullName = "Full Name";
