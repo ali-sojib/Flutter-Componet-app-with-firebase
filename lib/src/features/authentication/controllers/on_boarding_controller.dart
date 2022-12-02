@@ -46,12 +46,14 @@ class OnBoardingController extends GetxController {
     currentPage.value = activePageIndex;
   }
 
+  ///TODO: add smothing animation page transgection
   skip() => Get.offAll(WelcomeScreen());
 
   animateToNextSlide() {
     int nextPage = controller.currentPage + 1;
     controller.animateToPage(page: nextPage);
     if (nextPage == 3) {
+      ///TODO: add smothing animation page transgection
       Get.offAll(WelcomeScreen());
     }
   }
