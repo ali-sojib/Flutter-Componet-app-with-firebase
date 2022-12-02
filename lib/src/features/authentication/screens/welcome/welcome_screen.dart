@@ -3,6 +3,7 @@ import 'package:flutter_app_with_firebase/src/constant/colors.dart';
 import 'package:flutter_app_with_firebase/src/constant/image_strings.dart';
 import 'package:flutter_app_with_firebase/src/constant/sizes.dart';
 import 'package:flutter_app_with_firebase/src/constant/text_strings.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/login/login_screen.dart';
 import 'package:get/get.dart';
 import '../../../../common_widgets/fade_in_animation/animation_design.dart';
 import '../../../../common_widgets/fade_in_animation/fade_in_animation_controller.dart';
@@ -53,7 +54,9 @@ class WelcomeScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(LoginScreen());
+                          },
                           child: Text(sLogin.toUpperCase()),
                         ),
                       ),

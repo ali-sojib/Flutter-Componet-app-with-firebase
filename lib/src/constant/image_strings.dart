@@ -7,3 +7,6 @@ const String sOnBoardingImg2 = "assets/images/on_boarding_img/onboarding_2.jpg";
 const String sOnBoardingImg3 = "assets/images/on_boarding_img/onboarding_3.jpg";
 
 const String sWelcomeScreenImage = "assets/images/welcome_images/welcome_screen_image.png";
+
+//--Login Screen Text
+const String sGoogleLogoImage = "assets/logo/google-logo.png";

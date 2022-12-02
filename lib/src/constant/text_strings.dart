@@ -22,3 +22,15 @@ const String sOnBoardingCount3 = "3/3";
 // -- Welcome Screen Text
 const String sWelcomeScreenTitle = "Welcome To Best Quotes";
 const String sWelcomeScreenSubTitle = "Explorer the best Quotes for you";
+
+//--Login Screen Text
+const String sLoginTitle = "Welcome Back, ";
+const String sLoginSubTitle = "Make it work, make it right, make it fast.";
+const String sRememberMe = "Remember Me?";
+const String sAlreadyHaveAnAccount = "Already have an Account?";
+const String sDontHaveAnAccount = "Don't Have An Account? ";
+
+const String sEmail = "E-mail";
+const String sPassword = "Password";
+const String sForgetPassword = "Forget Password? ";
+const String sSignInWithGoogle = "Sign-In With Google";
