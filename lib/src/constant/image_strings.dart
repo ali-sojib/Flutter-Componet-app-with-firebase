@@ -10,3 +10,5 @@ const String sWelcomeScreenImage = "assets/images/welcome_images/welcome_screen_
 
 //--Login Screen Text
 const String sGoogleLogoImage = "assets/logo/google-logo.png";
+
+const String sForgetPasswordImage = "assets/images/forget_password/forget_password_img.png";

@@ -40,3 +40,16 @@ const String sSignupTitle = "Get On Board!";
 const String sSignupSubTitle = "Create your profile to start your Journey with us.....";
 const String sPhoneNo = "Phone Number";
 const String sFullName = "Full Name";
+
+// -- Forget Password Text
+const String sForgetPasswordTitle = "Make Selection!";
+const String sForgetPasswordSubTitle = "Select one of the options given below to reset your password.";
+const String sResetViaEMail = "Reset via E-Mail Verification.";
+const String sResetViaPhone = "Reset via Phone Verification.";
+
+//-- Forget Password Via Phone - Text
+const String sForgetPhoneSubTitle = "Enter your registered Phone No to receive OTP";
+
+//-- Forget Password Via E-Mail - Text
+const String sForgetMailSubTitle = "Enter your registered E-Mail to receive OTP";
+const String sNext = "Next";

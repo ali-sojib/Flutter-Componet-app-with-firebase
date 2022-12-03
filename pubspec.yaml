@@ -29,6 +29,8 @@ flutter:
     - assets/images/on_boarding_img/
     - assets/images/welcome_images/
     - assets/logo/
+    - assets/images/forget_password/
+
 
 
   #   - images/a_dot_ham.jpeg
