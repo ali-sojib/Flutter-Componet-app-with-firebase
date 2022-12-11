@@ -31,6 +31,7 @@ flutter:
     - assets/images/welcome_images/
     - assets/logo/
     - assets/images/forget_password/
+    - assets/images/dashboard/
 
 
 

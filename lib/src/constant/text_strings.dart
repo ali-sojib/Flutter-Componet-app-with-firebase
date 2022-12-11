@@ -59,3 +59,13 @@ const String sOtpTitle = "OTP";
 // code has been sent";
 const String sOtpSubTitle = "Verification";
 const String sOtpMessage = "Enter the verification code sent at ";
+
+//--Dashboard Screen - Text
+const String sDashboardTitle = "Hey, Quotes For You";
+const String sDashboardHeading = "Explore Quotes";
+const String sDashboardSearch = "Search...";
+const String sDashboardBannerTitle1 = "Quotes for Life Lesson";
+const String sDashboardBannerTitle2 = "Quotes About Love";
+const String sDashboardBannerSubTitle = "Best Quotes";
+const String sDashboardButton = "View All";
+const String sDashboardTopCourses = "Top Quotes";
