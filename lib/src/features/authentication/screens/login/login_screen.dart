@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/signup/signup_screen.dart';
+import 'package:get/get.dart';
 import '../../../../common_widgets/form/form_footer_widget.dart';
 import '../../../../common_widgets/form/form_header_widget.dart';
 import '../../../../constant/image_strings.dart';
@@ -24,7 +25,13 @@ class LoginScreen extends StatelessWidget {
               children: [
                 FormHeaderWidget(img: sWelcomeScreenImage, title: sLoginTitle, subTitle: sLoginSubTitle),
                 const LoginForm(),
-                FormFooterWidget(ftText: sDontHaveAnAccount, sdText: sSignUp),
+                FormFooterWidget(
+                  ftText: sDontHaveAnAccount,
+                  sdText: sSignUp,
+                  onPressed: () {
+                    Get.off(const SignupScreen());
+                  },
+                ),
               ],
             ),
           ),

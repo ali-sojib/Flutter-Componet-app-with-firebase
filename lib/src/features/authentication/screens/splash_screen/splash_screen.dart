@@ -4,7 +4,6 @@ import 'package:flutter_app_with_firebase/src/constant/image_strings.dart';
 import 'package:flutter_app_with_firebase/src/constant/sizes.dart';
 import 'package:flutter_app_with_firebase/src/constant/text_strings.dart';
 import 'package:get/get.dart';
-import 'package:flutter_app_with_firebase/src/features/authentication/screens/welcome/welcome_screen.dart';
 
 import '../../../../common_widgets/fade_in_animation/animation_design.dart';
 import '../../../../common_widgets/fade_in_animation/fade_in_animation_controller.dart';

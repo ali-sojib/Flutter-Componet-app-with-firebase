@@ -9,9 +9,11 @@ class FormFooterWidget extends StatelessWidget {
     Key? key,
     required this.ftText,
     required this.sdText,
+    required this.onPressed,
   }) : super(key: key);
 
   String ftText, sdText;
+  VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class FormFooterWidget extends StatelessWidget {
         ),
         const SizedBox(height: sFormHeight - 20),
         TextButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text.rich(
             TextSpan(
               text: ftText,

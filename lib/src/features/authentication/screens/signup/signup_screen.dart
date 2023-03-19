@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_with_firebase/src/common_widgets/form/form_header_widget.dart';
 import 'package:flutter_app_with_firebase/src/constant/sizes.dart';
 import 'package:flutter_app_with_firebase/src/constant/text_strings.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/login/login_screen.dart';
 import 'package:flutter_app_with_firebase/src/features/authentication/screens/signup/signup_form_widget.dart';
+import 'package:get/get.dart';
 
 import '../../../../common_widgets/form/form_footer_widget.dart';
 import '../../../../constant/image_strings.dart';
@@ -25,7 +27,13 @@ class SignupScreen extends StatelessWidget {
                   subTitle: sSignupSubTitle,
                 ),
                 const SignUpFormWidget(),
-                FormFooterWidget(ftText: sAlreadyHaveAnAccount, sdText: sLogin)
+                FormFooterWidget(
+                  ftText: sAlreadyHaveAnAccount,
+                  sdText: sLogin,
+                  onPressed: () {
+                    Get.off(const LoginScreen());
+                  },
+                )
               ],
             ),
           ),
