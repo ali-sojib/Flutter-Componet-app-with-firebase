@@ -252,9 +252,115 @@ class Dashboard extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: sDashboardPadding),
 
               //categories
-              Text('Top Categoris')
+              Text(sDashboardTopQuotes, style: textTheme.headline6!.apply(fontSizeFactor: 1.2)),
+              const SizedBox(height: sDashboardPadding),
+              SizedBox(
+                height: 200,
+                child: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    SizedBox(
+                      width: 320,
+                      height: 200,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 5, right: 10),
+                        child: Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: sCardBgColor),
+                          padding: const EdgeInsets.all(10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                Flexible(
+                                  child: Text(
+                                    "Best Famous Quotes Ever",
+                                    style: textTheme.headline4,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ), // Text
+                                ), // Flexible
+                                Flexible(child: Image(image: AssetImage(sTopQuotesImage1), height: 110)),
+                              ]), // Row
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(shape: const CircleBorder()),
+                                    onPressed: () {},
+                                    child: const Icon(Icons.play_arrow),
+                                  ), // ElevatedButton
+                                  const SizedBox(width: sDashboardCardPadding),
+                                  Flexible(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("life lessons", style: textTheme.headline4, overflow: TextOverflow.ellipsis),
+                                        Text("Werner Erhard thought about life ", style: textTheme.bodyText2, overflow: TextOverflow.ellipsis),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: sDashboardCardPadding),
+                    SizedBox(
+                      width: 320,
+                      height: 200,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 5, right: 10),
+                        child: Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: sCardBgColor),
+                          padding: const EdgeInsets.all(10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                Flexible(
+                                  child: Text(
+                                    "Quotes Only For Your",
+                                    style: textTheme.headline4,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ), // Text
+                                ), // Flexible
+                                Flexible(child: Image(image: AssetImage(sTopQuotesImage2), height: 110)),
+                              ]), // Row
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(shape: const CircleBorder()),
+                                    onPressed: () {},
+                                    child: const Icon(Icons.play_arrow),
+                                  ), // ElevatedButton
+                                  const SizedBox(width: sDashboardCardPadding),
+                                  Flexible(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Love live", style: textTheme.headline4, overflow: TextOverflow.ellipsis),
+                                        Text("Werner Erhard thought about life ", style: textTheme.bodyText2, overflow: TextOverflow.ellipsis),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

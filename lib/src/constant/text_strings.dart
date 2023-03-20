@@ -66,8 +66,8 @@ const String sDashboardHeading = "Explore Quotes";
 const String sDashboardSearch = "Search...";
 
 const String sDashboardBannerTitle1 = "Quotes for The Life Lesson";
-const String sDashboardBannerTitle2 = "Love Quotes";
+const String sDashboardBannerTitle2 = "Categories";
 const String sDashboardBannerSubTitle = "Best Quotes";
 
 const String sDashboardButton = "View All";
-const String sDashboardTopCourses = "Top Quotes";
+const String sDashboardTopQuotes = "Top Quotes";
