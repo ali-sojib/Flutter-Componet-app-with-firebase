@@ -4,6 +4,8 @@ import 'package:flutter_app_with_firebase/src/features/authentication/screens/sp
 import 'package:flutter_app_with_firebase/src/utils/theme/theme.dart';
 import 'package:get/get.dart';
 
+import 'src/features/core/screens/dashboard/dashboard.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,15 +17,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: SAppTheme.lightTheme,
-      darkTheme: SAppTheme.darkTheme,
-      themeMode: ThemeMode.system,
-      debugShowCheckedModeBanner: false,
-      defaultTransition: Transition.leftToRightWithFade,
-      transitionDuration: const Duration(milliseconds: 500),
-      home: SplashScreen(),
-    );
+        title: 'Flutter Demo',
+        theme: SAppTheme.lightTheme,
+        darkTheme: SAppTheme.darkTheme,
+        themeMode: ThemeMode.system,
+        debugShowCheckedModeBanner: false,
+        defaultTransition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+        home: Dashboard()
+        // SplashScreen(),
+        );
   }
 }
 

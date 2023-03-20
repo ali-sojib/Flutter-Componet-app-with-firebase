@@ -1,12 +1,97 @@
-import 'package:flutter/material.dart';
+import '../../../../constant/consts.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: const Icon(Icons.menu, color: Colors.black),
+        title: Text(sAppName, style: Theme.of(context).textTheme.headline4),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        actions: [
+          Container(
+            margin: const EdgeInsets.only(right: 20, top: 7),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: sCardBgColor),
+            child: IconButton(
+              onPressed: () {}, icon: Icon(Icons.person, color: Colors.black),
+              // const Image(image: AssetImage(sUserProfileImage)),
+            ),
+          )
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(sDashboardPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(sDashboardTitle, style: textTheme.bodyText2),
+              Text(sDashboardHeading, style: textTheme.headline2),
+              const SizedBox(height: sDashboardPadding),
+              //search box
+              Container(
+                decoration: const BoxDecoration(border: Border(left: BorderSide(width: 4))),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(sDashboardSearch, style: textTheme.headline2?.apply(color: Colors.grey.withOpacity(0.5))),
+                    const Icon(Icons.mic, size: 25),
+                  ],
+                ),
+              ),
+              const SizedBox(height: sDashboardPadding),
+
+              //Categories
+              SizedBox(
+                height: 50,
+                child: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    SizedBox(
+                      width: 170,
+                      height: 50,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 45,
+                            height: 50,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(18), color: sDarkColor),
+                            child: Center(
+                              child: Text(
+                                "JS",
+                                style: textTheme.headline6?.apply(color: Colors.white),
+                              ),
+                            ), // Center
+                          ), // Container
+                          const SizedBox(width: 5),
+                          Flexible(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Java Script", style: textTheme.headline6, overflow: TextOverflow.ellipsis),
+                                Text("10 Lessons", style: textTheme.bodyText2, overflow: TextOverflow.ellipsis)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
