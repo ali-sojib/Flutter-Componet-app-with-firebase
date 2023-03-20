@@ -34,6 +34,7 @@ class Dashboard extends StatelessWidget {
               Text(sDashboardTitle, style: textTheme.bodyText2),
               Text(sDashboardHeading, style: textTheme.headline2),
               const SizedBox(height: sDashboardPadding),
+
               //search box
               Container(
                 decoration: const BoxDecoration(border: Border(left: BorderSide(width: 4))),
@@ -85,9 +86,175 @@ class Dashboard extends StatelessWidget {
                         ],
                       ),
                     ),
+                    SizedBox(
+                      width: 170,
+                      height: 50,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 45,
+                            height: 50,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(18), color: sDarkColor),
+                            child: Center(
+                              child: Text(
+                                "JS",
+                                style: textTheme.headline6?.apply(color: Colors.white),
+                              ),
+                            ), // Center
+                          ), // Container
+                          const SizedBox(width: 5),
+                          Flexible(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Java Script", style: textTheme.headline6, overflow: TextOverflow.ellipsis),
+                                Text("10 Lessons", style: textTheme.bodyText2, overflow: TextOverflow.ellipsis)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 170,
+                      height: 50,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 45,
+                            height: 50,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(18), color: sDarkColor),
+                            child: Center(
+                              child: Text(
+                                "JS",
+                                style: textTheme.headline6?.apply(color: Colors.white),
+                              ),
+                            ), // Center
+                          ), // Container
+                          const SizedBox(width: 5),
+                          Flexible(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Java Script", style: textTheme.headline6, overflow: TextOverflow.ellipsis),
+                                Text("10 Lessons", style: textTheme.bodyText2, overflow: TextOverflow.ellipsis)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 170,
+                      height: 50,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 45,
+                            height: 50,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(18), color: sDarkColor),
+                            child: Center(
+                              child: Text(
+                                "JS",
+                                style: textTheme.headline6?.apply(color: Colors.white),
+                              ),
+                            ), // Center
+                          ), // Container
+                          const SizedBox(width: 5),
+                          Flexible(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Java Script", style: textTheme.headline6, overflow: TextOverflow.ellipsis),
+                                Text("10 Lessons", style: textTheme.bodyText2, overflow: TextOverflow.ellipsis)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-              )
+              ),
+              const SizedBox(height: sDashboardPadding),
+
+              //Banner
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: sCardBgColor),
+                      padding: const EdgeInsets.symmetric(horizontal: sDashboardCardPadding, vertical: sDashboardCardPadding + 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Flexible(child: Icon(Icons.book)),
+                              Flexible(child: Image(image: AssetImage(sBannerImage1))),
+                            ],
+                          ),
+                          const SizedBox(height: 25),
+                          Text(
+                            sDashboardBannerTitle1,
+                            style: textTheme.headline4,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Text(sDashboardBannerSubTitle, style: textTheme.bodyText2, maxLines: 1, overflow: TextOverflow.ellipsis),
+                        ],
+                      ), // Column
+                    ),
+                  ),
+                  const SizedBox(width: sDashboardPadding),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        //card
+                        Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: sCardBgColor),
+                          padding: const EdgeInsets.symmetric(horizontal: sDashboardCardPadding, vertical: sDashboardCardPadding - 3),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Flexible(child: Icon(Icons.book)),
+                                  Flexible(child: Image(image: AssetImage(sBannerImage2))),
+                                ],
+                              ),
+                              const SizedBox(height: 25),
+                              Text(
+                                sDashboardBannerTitle2,
+                                style: textTheme.headline4,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              Text(sDashboardBannerSubTitle, style: textTheme.bodyText2, maxLines: 1, overflow: TextOverflow.ellipsis),
+                            ],
+                          ), // Column
+                        ),
+                        //button
+                        SizedBox(
+                          width: double.infinity,
+                          child: OutlinedButton(onPressed: () {}, child: Text(sDashboardButton)),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+
+              //categories
+              Text('Top Categoris')
             ],
           ),
         ),
