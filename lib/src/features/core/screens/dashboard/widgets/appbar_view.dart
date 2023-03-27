@@ -1,3 +1,5 @@
+import 'package:flutter_app_with_firebase/src/repository/authenticaiton_repository/authenticaiton_repository.dart';
+
 import '../../../../../constant/consts.dart';
 
 class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -18,7 +20,10 @@ class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
           margin: const EdgeInsets.only(right: 20, top: 7),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: sCardBgColor),
           child: IconButton(
-            onPressed: () {}, icon: Icon(Icons.person, color: Colors.black),
+            onPressed: () {
+              AuthenticationRepository.instance.logout();
+            },
+            icon: Icon(Icons.person, color: Colors.black),
             // const Image(image: AssetImage(sUserProfileImage)),
           ),
         )

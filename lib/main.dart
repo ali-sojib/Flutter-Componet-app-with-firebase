@@ -1,12 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_with_firebase/firebase_options.dart';
 import 'package:flutter_app_with_firebase/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
 import 'package:flutter_app_with_firebase/src/features/authentication/screens/splash_screen/splash_screen.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/welcome/welcome_screen.dart';
+import 'package:flutter_app_with_firebase/src/repository/authenticaiton_repository/authenticaiton_repository.dart';
 import 'package:flutter_app_with_firebase/src/utils/theme/theme.dart';
 import 'package:get/get.dart';
 
 import 'src/features/core/screens/dashboard/dashboard.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then((value) => Get.put(AuthenticationRepository()));
   runApp(const MyApp());
 }
 
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         defaultTransition: Transition.leftToRightWithFade,
         transitionDuration: const Duration(milliseconds: 500),
-        home: Dashboard()
+        home: WelcomeScreen()
         // SplashScreen(),
         );
   }
