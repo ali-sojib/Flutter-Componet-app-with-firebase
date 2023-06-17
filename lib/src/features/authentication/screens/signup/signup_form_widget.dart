@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_with_firebase/src/features/authentication/controllers/signup_controller.dart';
+import 'package:flutter_app_with_firebase/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 import 'package:get/get.dart';
 
 import '../../../../constant/sizes.dart';
@@ -24,33 +25,43 @@ class SignUpFormWidget extends StatelessWidget {
           children: [
             TextFormField(
               controller: controller.fullName,
-              decoration: const InputDecoration(label: Text(sFullName), prefixIcon: Icon(Icons.person_outline)),
+              decoration: const InputDecoration(
+                  label: Text(sFullName),
+                  prefixIcon: Icon(Icons.person_outline)),
             ),
             SizedBox(height: sFormHeight - 20),
             TextFormField(
               controller: controller.email,
-              decoration: const InputDecoration(label: Text(sEmail), prefixIcon: Icon(Icons.email_outlined)),
+              decoration: const InputDecoration(
+                  label: Text(sEmail), prefixIcon: Icon(Icons.email_outlined)),
             ),
             SizedBox(height: sFormHeight - 20),
             TextFormField(
               controller: controller.phoneNo,
-              decoration: const InputDecoration(label: Text(sPhoneNo), prefixIcon: Icon(Icons.phone_android)),
+              decoration: const InputDecoration(
+                  label: Text(sPhoneNo), prefixIcon: Icon(Icons.phone_android)),
             ),
             SizedBox(height: sFormHeight - 20),
             TextFormField(
               controller: controller.password,
-              decoration: const InputDecoration(label: Text(sPassword), prefixIcon: Icon(Icons.fingerprint_outlined)),
+              decoration: const InputDecoration(
+                  label: Text(sPassword),
+                  prefixIcon: Icon(Icons.fingerprint_outlined)),
             ),
             SizedBox(height: sFormHeight - 10),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  print('pressssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss 000000');
+                  print(
+                      'pressssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss 000000');
                   if (_formKey.currentState!.validate()) {
-                    print('presssssssssssssssssssssss        _formKey.currentState!.validate()      sssssssssssssssssssssssss 000000');
-
-                    SignUpController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
+                    // SignUpController.instance.registerUser(
+                    //     controller.email.text.trim(),
+                    //     controller.password.text.trim());
+                    SignUpController.instance
+                        .phoneAuthentication(controller.phoneNo.text.trim());
+                    Get.offAll(() => const OTPScreen());
                   }
                 },
                 child: Text(sSignUp.toUpperCase()),

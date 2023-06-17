@@ -26,7 +26,11 @@ class LoginForm extends StatelessWidget {
           children: [
             TextFormField(
               controller: controller.email,
-              decoration: const InputDecoration(prefixIcon: Icon(Icons.person_outline_outlined), labelText: sEmail, hintText: sEmail, border: OutlineInputBorder()), // InputDecoration
+              decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.person_outline_outlined),
+                  labelText: sEmail,
+                  hintText: sEmail,
+                  border: OutlineInputBorder()), // InputDecoration
             ),
             const SizedBox(height: sFormHeight - 20),
             TextFormField(
@@ -56,11 +60,15 @@ class LoginForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  print('pressssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss 000000');
+                  print(
+                      'pressssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss 000000');
                   if (_formKey.currentState!.validate()) {
-                    print('presssssssssssssssssssssss        _formKey.currentState!.validate()      sssssssssssssssssssssssss 000000');
+                    print(
+                        'presssssssssssssssssssssss        _formKey.currentState!.validate()      sssssssssssssssssssssssss 000000');
 
-                    SignInController.instance.loginUser(controller.email.text.trim(), controller.password.text.trim());
+                    SignInController.instance.loginUser(
+                        controller.email.text.trim(),
+                        controller.password.text.trim());
                   }
                 },
                 child: Text(sLogin.toUpperCase()),

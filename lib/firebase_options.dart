@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '618827230661',
     projectId: 'flutter-componentapp-firebase',
     storageBucket: 'flutter-componentapp-firebase.appspot.com',
+    androidClientId: '618827230661-j6ambubrmmlbf80rjs8jm1rg3f9dvsba.apps.googleusercontent.com',
     iosClientId: '618827230661-r4dvdr2uo3fn7fgaf4n4jiib15fvmcri.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterAppWithFirebase',
   );
